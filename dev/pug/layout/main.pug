@@ -3,22 +3,39 @@ block variables
 
 doctype html
 html(lang="ru-RU")
-	head
-		meta(charset="utf-8")
-		title #{title}
-		<!--[if IE]>
-		meta(http-equiv='X-UA-Compatible', content="IE = edge")
-		<![endif]-->
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-		meta(name="keywords" content="")
-		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
-		link(rel="preconnect" href="https://fonts.gstatic.com")
-		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-	body.body
-		include ../modules/header/header
-		main.main
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+    body.body
+        include ../modules/header/header
+        main.main
+            section.intro
+                .intro__wrapper
+                    h1.intro__title Снова в школу вместе с Nickelodeon!
+                    b.intro__begin Все готовы к школе? В этом году возвращаться к учебе ещё приятнее, потому что мы подготовили для тебя конкурс.
+                    p.intro__description Пройди тест, чтобы узнать, кто ты из любимых героев. Каждый день мы дарим одному из участников подписку онлайн-кинотеатра КИОН, ведь мультсериалов много не бывает!
+                    p.intro__description После теста тебя ждёт конкурс - напиши нам, кто из героев Nickelodeon был бы лучшим соседом по парте, и участвуй в розыгрыше главного приза - огромного рюкзака с подарками.
+                    p.intro__description Пока ждёшь результатов конкурса - можешь посмотреть видео от наших актёров озвучания, которые тоже ходят в школу! Они поделятся с тобой полезными советами о том, как легко вернуться к учёбе после летних каникул.
 
-		include ../modules/footer/footer
-		script(src="static/js/vendor/jquery-3.3.1.min.js")
-		script(src="static/js/main.js")
-		block script
+                    .intro__controls
+                        a(href="event.html" target="_self").intro__controls-link Участвовать
+                        a(href="video.html" target="_self").intro__controls-link.video Смотреть видео
+
+                    .intro__prize
+                        picture.intro__frame
+                            source(srcset="static/images/content/intro-prize.webp" type="image/webp")
+                            img(src="static/images/content/intro-prize.png" alt="Приз рюкзак").intro__frame-image
+                        .intro__prize-description Этот рюкзак может быть твоим!
+        include ../modules/footer/footer
+        include ../modules/blocks/popup-prize
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/main.js")
+        block script
