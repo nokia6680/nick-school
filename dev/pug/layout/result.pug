@@ -25,6 +25,17 @@ html(lang="ru-RU")
                             img(src="static/images/content/pers-1.png" alt="Спанч Боб").result__frame-image.--first
                         h2.result__name Ты - Губка Боб
                         p.result__description Ты заботливый и дружелюбный, умеешь находить общий язык с любым человеком. Ты точно один из семейки Лаудов!
+                        
+                        .result__share
+                            b.result__share-name Поделиться результатом:
+                            +socialItem('Instagram', '#', 'fa-instagram')
+                            +socialItem('VK', '#', 'fa-vk')
+                        button(type="reset").result__reset Пройти ещё раз
+                    .results__esse
+                        h3.results__esse-tite Хочешь получить ещё больше призов?
+                        p.results__esse-description Расскажи, кто из героев Nickelodeon &mdash; лучший сосед по парте!
+                        
+                        a(href="esse.html" target="_blank").results__esse-link Участвовать
         include ../modules/footer/footer
         include ../modules/blocks/popup-prize
         script(src="static/js/vendor/jquery-3.3.1.min.js")

@@ -1,4 +1,36 @@
 .footer {
     width: 100%;
     @include flex-setting(column, flex-start, center);
+
+    padding: 0.375rem 1rem;
+
+    &__logo {
+        @include flex-setting(column, center, center);
+        width: 106px;
+        height: 35px;
+        margin-bottom: 0.875rem;
+        align-self: flex-end;
+
+        &-link {
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+
+        &-img {
+            width: inherit;
+            height: inherit;
+            object-fit: contain;
+        }
+    }
+
+    &__social {
+        display: none;
+    }
+
+    &__legal {
+        @include font-setting($primary-font, 0.3125rem, 0.375rem, 100, $black);
+        text-align: center;
+        white-space: nowrap;
+    }
 }

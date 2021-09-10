@@ -1,0 +1,30 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+    body.body
+        include ../modules/header/header
+        main.main
+            section.esse
+                .esse__wrapper
+                    h1.esse__title Расскажи, кто из героев Nickelodeon мог бы стать идеальным соседом по парте и почему?
+                    
+                    form(method="post" action="").esse__form
+                        textarea(name="esse" id="esse" placeholder="Мой идеальный сосед по парте это...").esse__textarea
+                        button(type="submit").esse__submit
+        include ../modules/footer/footer
+        include ../modules/blocks/popup-prize
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/main.js")
+        block script

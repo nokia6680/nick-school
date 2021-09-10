@@ -10,6 +10,16 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+var menuOpener = document.querySelector('.js-toggle');
+var menuOverlay = document.querySelector('.nav');
+
+if (menuOpener) {
+    menuOpener.addEventListener('click', function() {
+        menuOpener.classList.toggle('opened');
+        menuOverlay.classList.toggle('visible');
+    });
+};
+
 var firstStep = document.querySelector('.js-start');
 var firstPage = document.querySelector('.header');
 var secondPage = document.querySelector('.content');

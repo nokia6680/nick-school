@@ -1,4 +1,191 @@
 .header {
     width: 100%;
-    @include flex-setting(column, flex-start, center);
+
+    background-color: $white;
+
+    @include flex-setting(row, center, center);
+
+    position: relative;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &__logo {
+        @include flex-setting(column, center, center);
+
+        width: 165px;
+        height: 70px;
+
+        &-link {
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__toggle {
+        cursor: pointer;
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        right: 1.25rem;
+        top: 2.125rem;
+        padding: 0;
+        width: 26px;
+        height: 24px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='26' height='6' viewBox='0 0 26 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='26' height='6' fill='%23272727'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-size: 26px 6px;
+        background-repeat: no-repeat;
+        z-index: 12;
+        cursor: pointer;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 100%;
+            height: 6px;
+
+            background-color: $light-black;
+
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.2s linear;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 100%;
+            height: 6px;
+
+            background-color: $light-black;
+
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.2s linear;
+        }
+
+        &.opened {
+            background-image: none;
+
+            &::after,
+            &::before {
+                width: 28px;
+                transition: 0.2s linear;
+            }
+
+            &::after {
+                transform: translateX(-50%) rotate(45deg);
+                top: 10px;
+                transition: 0.2s linear;
+            }
+
+            &::before {
+                transform: translateX(-50%) rotate(135deg);
+                bottom: 8px;
+                transition: 0.2s linear;
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+    }
+}
+
+@include min-screen(768px) {
+    .header {
+        padding-top: 1.375rem;
+        padding-bottom: 1.375rem;
+
+        &__logo {
+            width: 211px;
+            height: 89px;
+        }
+
+        &__toggle {
+            right: 2.25rem;
+            top: 2.25rem;
+            width: 36px;
+            height: 32px;
+
+            background-image: url("data:image/svg+xml,%3Csvg width='36' height='8' viewBox='0 0 36 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='36' height='8' fill='%23272727'/%3E%3C/svg%3E");
+            background-size: 36px 8px;
+
+            &::after {
+                width: 100%;
+                height: 8px;
+            }
+
+            &::before {
+                height: 8px;
+            }
+
+            &.opened {
+                &::after,
+                &::before {
+                }
+
+                &::after {
+                    top: 10px;
+                }
+
+                &::before {
+                    bottom: 14px;
+                }
+            }
+        }
+    }
+}
+
+@include min-screen(1366px) {
+    .header {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__logo {
+            width: 187px;
+            height: 79px;
+            --width: calc(100% - 1156px);
+            margin-left: calc(var(--width) / 2);
+            margin-right: 4.375rem;
+        }
+
+        &__toggle {
+            display: none;
+        }
+
+        &__nav {
+            position: relative;
+        }
+    }
+}
+
+@include min-screen(1920px) {
+    .header {
+        padding-top: 2.125rem;
+
+        &__logo {
+            width: 252px;
+            height: 106px;
+            --width: calc(100% - 1590px);
+            margin-right: 5.875rem;
+        }
+    }
 }
