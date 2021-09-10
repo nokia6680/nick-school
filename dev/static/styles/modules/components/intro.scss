@@ -1,0 +1,171 @@
+.intro {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    padding: 0.625rem 0.625rem;
+
+    &__wrapper {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, fled-start);
+        background-color: #F5F3F3;
+        padding: 0.8125rem 0.4375rem 2.1875rem 0.4375rem;
+
+        border: 2px solid $light-black;
+
+        margin-bottom: 1.625rem;
+    }
+
+    &__title {
+        @include font-setting($title-font, 0.875rem, 0.9375rem, 800, $light-black);
+        text-transform: uppercase;
+        margin-bottom: 0.875rem;
+    }
+
+    &__begin {
+        @include font-setting($primary-font, 0.8125rem, 0.9375rem, 700, $light-black);
+        text-align: left;
+        margin-bottom: 0.8125rem;
+    }
+
+    &__info {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, center);
+
+        margin-bottom: 1.625rem;
+
+        &.desktop {
+            display: none;
+        }
+    }
+
+    &__description {
+        @include font-setting($primary-font, 0.8125rem, 0.9375rem, 500, $light-black);
+        margin-bottom: 0.9375rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__controls {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+
+        &-link {
+            width: 100%;
+            @include flex-setting(column, center, center);
+
+            @include font-setting($primary-font, 0.75rem, 0.875rem, 700, $light-black);
+            text-decoration: none;
+            border: 2px solid $light-black;
+            border-radius: 30px;
+            padding: 0.6875rem 0;
+
+            background-color: $orange;
+
+            &.video {
+                background-color: $white;
+                padding-right: 1.125rem;
+
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+
+                    right: 2.375rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    width: 14px;
+                    height: 14px;
+
+                    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.30221 6.71992L6.41849 4.61992C6.32547 4.52659 6.18593 4.52659 6.0464 4.57326C5.90686 4.61992 5.86035 4.75992 5.86035 4.89992V9.14659C5.86035 9.28659 5.95337 9.37992 6.0464 9.47326C6.09291 9.51992 6.13942 9.51992 6.18593 9.51992C6.27896 9.51992 6.32547 9.51992 6.37198 9.47326L9.2557 7.37326C9.34872 7.32659 9.39523 7.18659 9.39523 7.09326C9.44175 6.90659 9.39523 6.81326 9.30221 6.71992Z' fill='%23272727'/%3E%3Cpath d='M6.97674 0C3.11628 0 0 3.12667 0 7C0 10.8733 3.11628 14 6.97674 14C10.8372 14 13.9535 10.8733 13.9535 7C14 3.12667 10.8372 0 6.97674 0ZM6.97674 12.8333C3.76744 12.8333 1.16279 10.22 1.16279 7C1.16279 3.78 3.76744 1.16667 6.97674 1.16667C10.186 1.16667 12.7907 3.78 12.7907 7C12.7907 10.22 10.186 12.8333 6.97674 12.8333Z' fill='%23272727'/%3E%3C/svg%3E");
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            &.desktop {
+                display: none;
+            }
+        }
+    }
+
+    &__prize {
+        position: relative;
+
+        width: 100%;
+        max-width: 68.75%;
+
+        @include flex-setting(column, center, center);
+
+        border: 2px solid $light-black;
+
+        margin-bottom: 3.625rem;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 83px;
+            height: 66px;
+
+            background-image: url('../images/content/sb-pen.svg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            bottom: -1.25rem;
+            left: -3rem;
+        }
+
+        &-frame {
+            width: 100%;
+            height: 100%;
+
+            @include flex-setting(column, center, center);
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+        &-description {
+            position: absolute;
+            bottom: -2rem;
+            right: -1.25rem;
+            @include font-setting($title-font, 0.75rem, 1.0625rem, 800, $light-black);
+            text-transform: uppercase;
+            padding: 0.5rem 0.5rem;
+            width: 100%;
+
+            background-color: $yellow;
+            border: 2px solid $light-black;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: -1.25rem;
+                right: -1.25rem;
+                width: 44px;
+                height: 42px;
+
+                background-position: 50% 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='123' height='117' viewBox='0 0 123 117' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M61.6135 30.8387L78.638 6.00003L77.9571 36.2581L106.558 26.0968L87.9448 50.0323L117 58.6129L87.9448 66.9678L106.558 90.9033L77.9571 80.9678L78.638 111L61.6135 86.1613L44.362 111L45.2699 80.9678L16.6687 90.9033L35.0552 66.9678L6 58.6129L35.0552 50.0323L16.6687 26.0968L45.2699 36.2581L44.362 6.00003L61.6135 30.8387Z' fill='%23FF7DAF' stroke='%23272727' stroke-width='3'/%3E%3Cpath d='M71.85 48.5V38.5H52.25V48.5L54.35 61.8H69.75L71.85 48.5ZM71.95 69.6C71.95 73.35 69.4 75.95 62 75.95C54.7 75.95 52.1 73.35 52.1 69.6C52.1 65.85 54.7 63.25 62 63.25C69.4 63.25 71.95 65.85 71.95 69.6Z' fill='%23F5F3F4'/%3E%3Cpath d='M71.85 48.5L73.3316 48.734L73.35 48.6177V48.5H71.85ZM71.85 38.5H73.35V37H71.85V38.5ZM52.25 38.5V37H50.75V38.5H52.25ZM52.25 48.5H50.75V48.6177L50.7684 48.734L52.25 48.5ZM54.35 61.8L52.8684 62.034L53.0683 63.3H54.35V61.8ZM69.75 61.8V63.3H71.0317L71.2316 62.034L69.75 61.8ZM73.35 48.5V38.5H70.35V48.5H73.35ZM71.85 37H52.25V40H71.85V37ZM50.75 38.5V48.5H53.75V38.5H50.75ZM50.7684 48.734L52.8684 62.034L55.8316 61.5661L53.7316 48.2661L50.7684 48.734ZM54.35 63.3H69.75V60.3H54.35V63.3ZM71.2316 62.034L73.3316 48.734L70.3684 48.2661L68.2684 61.5661L71.2316 62.034ZM70.45 69.6C70.45 71.0933 69.9696 72.1792 68.8768 72.9617C67.6867 73.8137 65.5721 74.45 62 74.45V77.45C65.8279 77.45 68.6883 76.7863 70.6232 75.4009C72.6554 73.9459 73.45 71.8567 73.45 69.6H70.45ZM62 74.45C58.4822 74.45 56.3779 73.8153 55.1857 72.9617C54.0873 72.1752 53.6 71.0852 53.6 69.6H50.6C50.6 71.8648 51.4127 73.9499 53.4393 75.4009C55.3721 76.7848 58.2178 77.45 62 77.45V74.45ZM53.6 69.6C53.6 68.1148 54.0873 67.0249 55.1857 66.2384C56.3779 65.3848 58.4822 64.75 62 64.75V61.75C58.2178 61.75 55.3721 62.4153 53.4393 63.7992C51.4127 65.2502 50.6 67.3352 50.6 69.6H53.6ZM62 64.75C65.5721 64.75 67.6867 65.3863 68.8768 66.2384C69.9696 67.0209 70.45 68.1067 70.45 69.6H73.45C73.45 67.3433 72.6554 65.2542 70.6232 63.7992C68.6883 62.4137 65.8279 61.75 62 61.75V64.75Z' fill='%23272727'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}

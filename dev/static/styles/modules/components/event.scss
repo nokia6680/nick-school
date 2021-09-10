@@ -1,68 +1,149 @@
 .event {
     width: 100%;
-    min-height: 0;
-    height: -webkit-fill-available;
-    height: calc(var(--vh, 1vh) * 100);
-    max-height: 0;
-    @include flex-setting(column, flex-start, center);
-    background-color: $bordo;
 
-    position: relative;
-    overflow-x: hidden;
+    @include flex-setting(column, flex-start, center);
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    margin-bottom: 4.625rem;
+
+    &__wrapper {
+        @include flex-setting(column, flex-start, center);
+    }
 
     &__title {
-        @include font-setting($primary-font, 1.375rem, 1.5rem, 500, $white);
+        @include font-setting($title-font, 0.625rem, 0.75rem, 800, $light-black);
         text-align: center;
-        max-width: 80%;
-        margin-bottom: 1.25rem;
-        opacity: 0;
-        transform: translateX(-20px);
-        transition: 0.4s ease-in 0.5s;
+        text-transform: uppercase;
+        margin-bottom: 0.625rem;
     }
 
-    &.visible {
-        min-height: 100%;
-        height: -webkit-fill-available;
-        max-height: 100%;
-        height: calc(var(--vh, 1vh) * 100);
-        padding: 2.125rem 1.25rem 2.125rem 1.25rem;
-        transition: all 0.4s ease-in;
+    &__test {
+        width: 100%;
 
-        .event__title {
-            transform: translateX(0);
-            opacity: 1;
-            transition: 0.4s ease-in 0.8s;
+        @include flex-setting(column, flex-start, center);
+        background-color: #F5F3F3;
+        border: 2px solid $black;
+
+        padding: 0.625rem 0.625rem 2.125rem 0.625rem;
+        margin-bottom: 1rem;
+
+        &-count {
+            @include font-setting('IMB Plex Mono', 0.8125rem, 0.9375rem, 700, $text-orange);
+            margin-bottom: 0.5rem;
         }
 
-        .event__form {
-            transform: translateX(0);
-            transition: 0.6s ease-in-out 1s;
+        &-question {
+            @include font-setting($primary-font, 1rem, 1.1875rem, 700, $light-black);
+            text-align: center;
+            max-width: 70%;
+            margin-bottom: 1.25rem;
+        }
+
+        &-list {
+            width: 100%;
+            @include flex-setting(column, flex-start, center);
+        }
+
+        &-item {
+            width: 100%;
+            height: 36px;
+
+            @include flex-setting(column, center, center);
+
+            margin-bottom: 0.75rem;
+            padding: 0 0.625rem;
+
+            border: 1px solid $black;
+            border-radius: 40px;
+
+            background-color: $white;
+            cursor: pointer;
+            outline: none;
+            transition: 0.4s ease-in;
+
+            &:active,
+            &:hover {
+                background-color: $orange;
+                transition: 0.4s ease-in;
+            }
+
+            &.correct {
+                background-color: $green;
+                transition: 0.4s ease-in;
+            }
+
+            &.mistake {
+                background-color: $red;
+                transition: 0.4s ease-in;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-variant {
+            @include font-setting($primary-font, 0.6875rem, 0.8125rem, 500, $light-black);
+            text-align: center;
         }
     }
 
-    &.visible.passed {
-        background-color: $white;
-        transition: 0.4s ease-in-out 0.4s;
+    &__info {
+        width: 100%;
+        max-width: 300px;
+        @include flex-setting(column, flex-start, center);
 
-        .event__title {
-            transform: translateX(-120%);
-            opacity: 0;
-            transition: 0.4s ease-in-out;
+        background-color: $yellow;
+        border: 2px solid $light-black;
+
+        padding: 0.9375rem 0.25rem 2.25rem 0.25rem;
+
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 44px;
+            height: 101px;
+
+            background-image: url('../images/content/ollie.png');
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            bottom: -4rem;
+            left: 0.5rem;
         }
 
-        .event__form {
-            transform: translateX(120%);
-            transition: 0.4s ease-in-out;
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 55px;
+            height: 62px;
+
+            background-image: url('../images/content/lily.png');
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            bottom: -2rem;
+            right: 0.5rem;
         }
     }
 
-    &.visible.passed.invisible {
-        padding: 0;
-        max-height: 0;
-        min-height: 0;
+    &__subtitle {
+        @include font-setting($title-font, 0.8125rem, 1rem, 800, $light-black);
+        text-align: center;
+        margin-bottom: 0.625rem;
     }
 
-    &__form {
-        transform: translateX(120%);
+    &__description {
+        @include font-setting($primary-font, 0.8125rem, 0.9375rem, 700, $light-black);
+        text-align: center;
+        max-width: 86%;
     }
 }

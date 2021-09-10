@@ -1,0 +1,84 @@
+.popup-prize {
+    width: 100vw;
+    height: 100vh;
+
+    @include flex-setting(column, center, center);
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
+
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 83.75%;
+        display: grid;
+        grid-template-areas:
+            'logo closer'
+            'image image'
+            'description description'
+        ;
+
+        background-color: $white;
+        border: 2px solid $light-black;
+
+        padding: 1rem 1rem;
+    }
+
+    &__link {
+        grid-area: logo;
+        display: block;
+        width: 65px;
+        height: 21px;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__closer {
+        justify-self: end;
+        grid-area: closer;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.32275 4.57849L27.2106 25.8879' stroke='black' stroke-width='8'/%3E%3Cpath d='M3.53345 26.1127L27.1274 4.88732' stroke='black' stroke-width='8'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__frame {
+        justify-self: center;
+        grid-area: image;
+        width: 100%;
+        max-width: 68.65%;
+
+        @include flex-setting(column, center, center);
+        margin-bottom: 0.625rem;
+    }
+
+    &__description {
+        grid-area: description;
+        @include font-setting($title-font, 0.75rem, 1rem, 800, $light-black);
+        text-align: left;
+        text-transform: uppercase;
+    }
+}

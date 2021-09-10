@@ -21,19 +21,22 @@ html(lang="ru-RU")
                 .intro__wrapper
                     h1.intro__title Снова в школу вместе с Nickelodeon!
                     b.intro__begin Все готовы к школе? В этом году возвращаться к учебе ещё приятнее, потому что мы подготовили для тебя конкурс.
-                    p.intro__description Пройди тест, чтобы узнать, кто ты из любимых героев. Каждый день мы дарим одному из участников подписку онлайн-кинотеатра КИОН, ведь мультсериалов много не бывает!
-                    p.intro__description После теста тебя ждёт конкурс - напиши нам, кто из героев Nickelodeon был бы лучшим соседом по парте, и участвуй в розыгрыше главного приза - огромного рюкзака с подарками.
-                    p.intro__description Пока ждёшь результатов конкурса - можешь посмотреть видео от наших актёров озвучания, которые тоже ходят в школу! Они поделятся с тобой полезными советами о том, как легко вернуться к учёбе после летних каникул.
-
+                    .intro__info.desktop
+                        p.intro__description Пройди тест, чтобы узнать, кто ты из любимых героев. Каждый день мы дарим одному из участников подписку онлайн-кинотеатра КИОН, ведь мультсериалов много не бывает!
+                        p.intro__description После теста тебя ждёт конкурс - напиши нам, кто из героев Nickelodeon был бы лучшим соседом по парте, и участвуй в розыгрыше главного приза - огромного рюкзака с подарками.
+                        p.intro__description Пока ждёшь результатов конкурса - можешь посмотреть видео от наших актёров озвучания, которые тоже ходят в школу! Они поделятся с тобой полезными советами о том, как легко вернуться к учёбе после летних каникул.
+                    .intro__info
+                        p.intro__description Сначала пройди тест, узнай кто ты из персонажей Nickelodeon и получи возможность выиграть ежедневный приз!
+                        p.intro__description А после, участвуй в конкурсе, расскажи кто из героев Nickelodeon стал бы идеальным соседом по парте, и поборись за главный приз.
                     .intro__controls
-                        a(href="event.html" target="_self").intro__controls-link Участвовать
-                        a(href="video.html" target="_self").intro__controls-link.video Смотреть видео
-
-                    .intro__prize
-                        picture.intro__frame
-                            source(srcset="static/images/content/intro-prize.webp" type="image/webp")
-                            img(src="static/images/content/intro-prize.png" alt="Приз рюкзак").intro__frame-image
-                        .intro__prize-description Этот рюкзак может быть твоим!
+                        a(href="video.html" target="_self").intro__controls-link.video Видео
+                        a(href="test.html" target="_self").intro__controls-link.start Участвовать
+                        a(href="video.html" target="_self").intro__controls-link.video.desktop Смотреть видео
+                .intro__prize
+                    picture.intro__prize-frame
+                        source(srcset="static/images/content/intro-prize.webp" type="image/webp")
+                        img(src="static/images/content/intro-prize.png" alt="Приз рюкзак").intro__frame-image
+                    .intro__prize-description Этот рюкзак может быть твоим!
         include ../modules/footer/footer
         include ../modules/blocks/popup-prize
         script(src="static/js/vendor/jquery-3.3.1.min.js")
