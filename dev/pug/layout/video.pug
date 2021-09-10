@@ -22,9 +22,13 @@ html(lang="ru-RU")
                     .video__slider.swiper-container.video-top
                         .swiper-wrapper
                             .video__slide.swiper-slide
+                                video(class="video__content" src="static/videos/video-1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0")
                     .video__slider.swiper-container.video-thumbs
                         .swiper-wrapper
                             .video__slide.video__slide--thumbs.swiper-slide
+                                picture.video__frame
+                                    source(srcset="static/images/content/video-poster-1.webp" type="image/webp")
+                                    img(src="static/images/content/video-poster-1.jpg" alt="VideoName").video__frame-poster
                     .video__controls
                         button(type="button").video__prev-th
                         button(type="button").video__next-th

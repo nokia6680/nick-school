@@ -34,3 +34,19 @@
         white-space: nowrap;
     }
 }
+
+@include min-screen(768px) {
+    .footer {
+        padding: 0.5rem 1.25rem;
+
+        &__logo {
+            width: 98px;
+            height: 33px;
+        }
+
+        &__legal {
+            font-size: 0.4375rem;
+            line-height: 0.5rem;
+        }
+    }
+}
