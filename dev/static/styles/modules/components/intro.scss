@@ -8,7 +8,7 @@
     &__wrapper {
         width: 100%;
 
-        @include flex-setting(column, flex-start, fled-start);
+        @include flex-setting(column, flex-start, flex-start);
         background-color: #F5F3F3;
         padding: 0.8125rem 0.4375rem 2.1875rem 0.4375rem;
 
@@ -69,7 +69,7 @@
 
             background-color: $orange;
 
-            &.video {
+            &.--video {
                 background-color: $white;
                 padding-right: 1.125rem;
 
@@ -93,7 +93,7 @@
                 }
             }
 
-            &.desktop {
+            &.--desktop {
                 display: none;
             }
         }
@@ -103,7 +103,7 @@
         position: relative;
 
         width: 100%;
-        max-width: 68.75%;
+        max-width: 75%;
 
         @include flex-setting(column, center, center);
 
@@ -116,15 +116,15 @@
             content: '';
 
             width: 83px;
-            height: 66px;
+            height: 70px;
 
             background-image: url('../images/content/sb-pen.svg');
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: contain;
 
-            bottom: -1.25rem;
-            left: -3rem;
+            bottom: -1rem;
+            left: -2.5rem;
         }
 
         &-frame {
@@ -144,7 +144,7 @@
         &-description {
             position: absolute;
             bottom: -2rem;
-            right: -1.25rem;
+            right: -1.5rem;
             @include font-setting($title-font, 0.75rem, 1.0625rem, 800, $light-black);
             text-transform: uppercase;
             padding: 0.5rem 0.5rem;
@@ -152,6 +152,18 @@
 
             background-color: $yellow;
             border: 2px solid $light-black;
+
+            &::before {
+                z-index: -4;
+                position: absolute;
+                content: '';
+
+                width: 100%;
+                height: 100%;
+
+                background-color: #929292;
+                border: 2px solid #272727;
+            }
 
             &::after {
                 position: absolute;

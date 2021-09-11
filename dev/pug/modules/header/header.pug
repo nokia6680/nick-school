@@ -1,4 +1,4 @@
--var navList = [{name:'Видео', link: 'video.html'}, {name:'Конкурс', link: 'test.html'}, {name:'Правила', link: 'rules.html'}, {name:'Призы', link: '#'}, {name:'Планер', link: 'planer.html'}];
+-var navList = [{type:'', name:'Видео', link: 'video.html'}, {type:'', name:'Конкурс', link: 'test.html'}, {type:'', name:'Правила', link: 'rules.html'}, {type:'prize-toggle', name:'Призы', link: '#'}, {type:'', name:'Планер', link: 'planer.html'}];
 
 header.header
     .header__logo
@@ -10,7 +10,7 @@ header.header
         ul.nav__list
             for i in navList
                 li.nav__item
-                    a(href="" +i.link target="_self").nav__link=i.name
+                    a(href="" +i.link target="_self" class="nav__link " +i.type)=i.name
                     
         a(href="#" target="_self").nav__login Войти
         

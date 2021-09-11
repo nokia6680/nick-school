@@ -10,7 +10,7 @@ html(lang="ru-RU")
         meta(http-equiv='X-UA-Compatible', content="IE = edge")
         <![endif]-->
         meta(name="viewport" content="width=device-width,initial-scale=1")
-        meta(name="keywords" content="")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css")
     body.body
@@ -22,19 +22,61 @@ html(lang="ru-RU")
                     .video__slider.swiper-container.video-top
                         .swiper-wrapper
                             .video__slide.swiper-slide
-                                video(class="video__content" src="static/videos/video-1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0")
+                                video(class="video__content" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0" poster="static/images/content/video-poster-1.jpg")
+                                    //source(src="static/video/video-vertical-1.mp4" media="(max-width: 414px)")
+                                    //source(src="static/video/video-horizontal-1.mp4" media="(min-width: 600px)")
+                                    source(src="static/video/video-horizontal-1.mp4")
                                 h3.video__name Название ролика
+                            .video__slide.swiper-slide
+                                video(class="video__content" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0")
+                                    //source(src="static/video/video-vertical-1.mp4" media="(max-width: 414px)")
+                                    //source(src="static/video/video-horizontal-1.mp4" media="(min-width: 600px)")
+                                    source(src="static/video/video-horizontal-1.mp4")
+                                h3.video__name Название ролика
+                            .video__slide.swiper-slide
+                                video(class="video__content" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0")
+                                    //source(src="static/video/video-vertical-1.mp4" media="(max-width: 414px)")
+                                    //source(src="static/video/video-horizontal-1.mp4" media="(min-width: 600px)")
+                                    source(src="static/video/video-horizontal-1.mp4")
+                                h3.video__name Название ролика
+                            .video__slide.swiper-slide
+                                video(class="video__content" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls="controls" tabindex="0")
+                                    //source(src="static/video/video-vertical-1.mp4" media="(max-width: 414px)")
+                                    //source(src="static/video/video-horizontal-1.mp4" media="(min-width: 600px)")
+                                    source(src="static/video/video-horizontal-1.mp4")
+                                h3.video__name Название ролика
+                        .video__controls
+                            button(type="button").video__prev-th
+                            button(type="button").video__next-th
                     .video__slider.swiper-container.video-thumbs
                         .swiper-wrapper
+                            .video__slide.video__slide--thumbs.swiper-slide
+                                .video__preview
+                                    picture.video__frame
+                                        source(srcset="static/images/content/video-poster-1.webp" type="image/webp")
+                                        img(src="static/images/content/video-poster-1.jpg" alt="VideoName").video__frame-poster
+                                    span.video__duration 21:59
+                                h3.video__name Название ролика 
                             .video__slide.video__slide--thumbs.swiper-slide
                                 picture.video__frame
                                     source(srcset="static/images/content/video-poster-1.webp" type="image/webp")
                                     img(src="static/images/content/video-poster-1.jpg" alt="VideoName").video__frame-poster
-                    .video__controls
-                        button(type="button").video__prev-th
-                        button(type="button").video__next-th
+                                h3.video__name Название ролика
+                            .video__slide.video__slide--thumbs.swiper-slide
+                                picture.video__frame
+                                    source(srcset="static/images/content/video-poster-1.webp" type="image/webp")
+                                    img(src="static/images/content/video-poster-1.jpg" alt="VideoName").video__frame-poster
+                                h3.video__name Название ролика
+                            .video__slide.video__slide--thumbs.swiper-slide
+                                picture.video__frame
+                                    source(srcset="static/images/content/video-poster-1.webp" type="image/webp")
+                                    img(src="static/images/content/video-poster-1.jpg" alt="VideoName").video__frame-poster
+                                h3.video__name Название ролика
+                        .swiper-scrollbar
         include ../modules/footer/footer
         include ../modules/blocks/popup-prize
-        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        //script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.js")
         script(src="static/js/main.js")
+        script(src="static/js/app.js")
         block script
