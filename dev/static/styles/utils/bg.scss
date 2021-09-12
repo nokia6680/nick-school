@@ -3,10 +3,15 @@
 .essay-bg,
 .video-bg {
     position: fixed;
-    width: 100vw;
-    height: 100%;
-
+    width: 402px;
+    height: 377px;
     z-index: -1;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
 }
 
 .index-img-1 {
@@ -14,9 +19,31 @@
     height: 130px;
 
     position: absolute;
+
+    top: 8.75rem;
+    left: -2rem;
+    z-index: 4;
+}
+
+.index-img-2 {
+    position: absolute;
+    width: 161px;
+    height: 260px;
+
+    bottom: 1.5625rem;
+    right: 0.3125rem;
 }
 
 .index-img-3 {
+    position: absolute;
+    bottom: 0;
+    left: 1.9375rem;
+    width: 185px;
+    height: 170px;
+    z-index: 3;
+}
+
+.index-img-4 {
     width: 130px;
     height: 130px;
 
@@ -24,4 +51,8 @@
 
     top: 0;
     right: -3.4375rem;
+}
+
+.index-img-5 {
+    display: none;
 }

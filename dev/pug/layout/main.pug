@@ -18,8 +18,10 @@ html(lang="ru-RU")
             .index-bg
                 img(src="static/images/content/index-bg-blue-round.svg" alt="").index-bg__img.index-img-1
                 img(src="static/images/content/index-bg-yellow-quad.svg" alt="").index-bg__img.index-img-2
-                img(src="static/images/content/index-bg-pink-round.svg" alt="").index-bg__img.index-img-3
-                img(src="static/images/content/index-bg-violet-quad.svg" alt="").index-bg__img.index-img-4
+                img(src="static/images/content/index-bg-pink-quad.svg" alt="").index-bg__img.index-img-3
+                svg(width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg").index-bg__img.index-img-4
+                    circle(cx="65" cy="65" r="64" fill="#FF7DAF" stroke="#272727" stroke-width="3")
+                img(src="static/images/content/index-bg-violet-quad.svg" alt="").index-bg__img.index-img-5
             section.intro
                 .intro__wrapper
                     h1.intro__title Снова в школу!
@@ -35,10 +37,12 @@ html(lang="ru-RU")
                         p.intro__description А после, участвуй в конкурсе, расскажи кто из героев Nickelodeon стал бы идеальным соседом по парте, и поборись за главный приз.
                     .intro__controls
                         a(href="video.html" target="_self").intro__controls-link.--video.--mobile Видео
-                        a(href="test.html" target="_self").intro__controls-link.--start Участвовать
+                        a(href="test.html" target="_self").intro__controls-link Участвовать
                         a(href="video.html" target="_self").intro__controls-link.--video.--desktop Смотреть видео
                 .intro__prize
                     picture.intro__prize-frame
+                        source(srcset="static/images/content/intro-prize-desktop.webp" type="image/webp" media="(min-width: 1366px)")
+                        source(srcset="static/images/content/intro-prize-desktop.png" media="(min-width: 1366px)")
                         source(srcset="static/images/content/intro-prize.webp" type="image/webp")
                         img(src="static/images/content/intro-prize.png" alt="Приз рюкзак").intro__frame-image
                     .intro__prize-description Этот рюкзак может быть твоим!

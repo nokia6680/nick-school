@@ -1,5 +1,5 @@
 var galleryThumbs = new Swiper('.video-thumbs', {
-    spaceBetween: 30,
+    spaceBetween: 40,
     slidesPerView: 1,
     freeMode: false,
     direction: 'vertical',
@@ -9,6 +9,36 @@ var galleryThumbs = new Swiper('.video-thumbs', {
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
+    },
+
+    breakpoints: {
+        320: {
+            spaceBetween: 40,
+            slidesPerView: 1,
+            freeMode: false,
+            direction: 'vertical',
+            autoplay: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+        },
+
+        1366: {
+            spaceBetween: 4,
+            slidesPerView: 3,
+            freeMode: false,
+            direction: 'vertical',
+            autoplay: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+        },
     },
 });
 

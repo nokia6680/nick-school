@@ -50,3 +50,84 @@
         }
     }
 }
+
+@include min-screen(1366px) {
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+
+        z-index: 0;
+
+        display: grid;
+        grid-template-areas:
+            'logo social'
+            'legal legal'
+        ;
+
+        justify-content: space-between;
+
+        --width: calc(100% - 1156px);
+        padding-left: calc(var(--width) / 2);
+        --width2: calc(100% - 1194px);
+        padding-right: calc(var(--width2) / 2);
+
+        padding-bottom: 0.5rem;
+
+        &__logo {
+            grid-area: logo;
+            align-self: flex-start;
+            width: 98px;
+            height: 33px;
+        }
+
+        &__legal {
+            justify-self: end;
+            grid-area: legal;
+            font-size: 0.5rem;
+            line-height: 0.625rem;
+            color: $black;
+            text-align: right;
+        }
+
+        &__social {
+            grid-area: social;
+
+            @include flex-setting(row, flex-end, center);
+
+            width: auto;
+
+            .social__item {
+                margin-left: 1rem;
+                margin-right: 0;
+
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .social__link {
+                .fa-youtube::before {
+                    font-size: 1rem;
+                    color: $blue;
+                }
+
+                .fa-vk::before {
+                    font-size: 1rem;
+                    color: $blue;
+                }
+
+                .fa-instagram::before {
+                    font-size: 1rem;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

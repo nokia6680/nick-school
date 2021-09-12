@@ -84,6 +84,10 @@ button { outline: none; }
     &.no-scroll {
         overflow: hidden;
     }
+
+    @media only screen and (min-width: 1366px) {
+        overflow: hidden;
+    }
 }
 
 .hidden {
