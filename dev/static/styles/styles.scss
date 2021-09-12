@@ -6,6 +6,7 @@
 @import "utils/animations";
 @import "utils/typo";
 @import "utils/fluid-font";
+@import "utils/bg";
 //@include sprites($spritesheet-sprites);
 
 
@@ -78,6 +79,7 @@ button { outline: none; }
 
 .body {
     width: 100%;
+    position: relative;
 
     &.no-scroll {
         overflow: hidden;

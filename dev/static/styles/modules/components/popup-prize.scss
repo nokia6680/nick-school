@@ -82,3 +82,34 @@
         text-transform: uppercase;
     }
 }
+
+@include min-screen(768px) {
+    .popup-prize {
+        &__wrapper {
+            max-width: 428px;
+
+            padding: 1rem 1rem;
+        }
+
+        &__link {
+            width: 146px;
+            height: 54px;
+        }
+
+        &__closer {
+            width: 36px;
+            height: 36px;
+        }
+
+        &__frame {
+            max-width: 293px;
+            height: 277px;
+            margin-bottom: 1.625rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+        }
+    }
+}

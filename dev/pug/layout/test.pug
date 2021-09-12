@@ -15,6 +15,9 @@ html(lang="ru-RU")
     body.body
         include ../modules/header/header
         main.main
+            .event-bg
+                img(src="static/images/content/index-bg-pink-round.svg" alt="").event-bg__img
+                img(src="static/images/content/index-bg-violet-round.svg" alt="").event-bg__img.result-img
             section.event.passed
                 .event__wrapper
                     h1.event__title Пройди тест, чтобы узнать, кто ты из героев Nickelodeon
@@ -46,7 +49,22 @@ html(lang="ru-RU")
                     .result__main
                         picture.result__frame
                             source(srcset="static/images/content/pers-1.webp" type="image/webp")
-                            img(src="static/images/content/pers-1.png" alt="Спанч Боб").result__frame-image.--first
+                            img(src="static/images/content/pers-1.png" alt="Спанч Боб").result__frame-image
+                        picture(style="display: none;").result__frame
+                            source(srcset="static/images/content/pers-2.webp" type="image/webp")
+                            img(src="static/images/content/pers-2.png" alt="Спанч Боб").result__frame-image
+                        picture(style="display: none;").result__frame
+                            source(srcset="static/images/content/pers-3.webp" type="image/webp")
+                            img(src="static/images/content/pers-3.png" alt="Спанч Боб").result__frame-image
+                        picture(style="display: none;").result__frame
+                            source(srcset="static/images/content/pers-4.webp" type="image/webp")
+                            img(src="static/images/content/pers-4.png" alt="Спанч Боб").result__frame-image
+                        picture(style="display: none;").result__frame
+                            source(srcset="static/images/content/pers-5.webp" type="image/webp")
+                            img(src="static/images/content/pers-5.png" alt="Спанч Боб").result__frame-image
+                        picture(style="display: none;").result__frame
+                            source(srcset="static/images/content/pers-6.webp" type="image/webp")
+                            img(src="static/images/content/pers-6.png" alt="Спанч Боб").result__frame-image
                         h2.result__name Ты - Губка Боб
                         p.result__description Ты заботливый и дружелюбный, умеешь находить общий язык с любым человеком. Ты точно один из семейки Лаудов!
 

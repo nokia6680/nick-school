@@ -148,3 +148,122 @@
         }
     }
 }
+
+@include min-screen(768px) {
+    .essay {
+        padding: 0;
+        background-color: transparent;
+
+        margin-top: rem;
+        margin-bottom: 1.375rem;
+
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 52px;
+            height: 48px;
+
+            background-image: url('../images/content/pin.svg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            top: -1.5rem;
+            left: 1.25rem;
+            z-index: -1;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 185px;
+            height: 175px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../images/content/bob-book.svg');
+
+            left: 1rem;
+            bottom: -5rem;
+        }
+
+        &__wrapper {
+            width: 100%;
+            max-width: 494px;
+            background-color: $pink;
+            border: 2px solid $light-black;
+
+            padding: 1.375rem 3rem 2rem 3rem;
+
+            &::after {
+                width: 102px;
+                height: 184px;
+
+                bottom: auto;
+                left: auto;
+                top: 1rem;
+                right: -8rem;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+
+                width: 140px;
+                height: 140px;
+
+                transform: scaleX(-1);
+
+                top: -5rem;
+                right: auto;
+                left: -11rem;
+            }
+        }
+
+        &__title {
+            font-size: 1.125rem;
+            line-height: 1.3125rem;
+            margin-bottom: 0.9375rem;
+        }
+
+        &__textarea {
+            height: 376px;
+            font-size: 1rem;
+            line-height: 1.1875rem;
+
+            padding: 0.9375rem 1.75rem;
+            margin-bottom: 1.625rem;
+        }
+
+        &__submit {
+            font-size: 1rem;
+            line-height: 1.1875rem;
+            height: 54px;
+
+            padding: 0 4.5rem;
+        }
+
+        &__reaction {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            @include flex-setting(column, center, center);
+
+            &-title {
+                @include font-setting($title-font, 1.25rem, 1.5rem, 800, $light-black);
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

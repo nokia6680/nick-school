@@ -181,3 +181,110 @@
         }
     }
 }
+
+@include min-screen(768px) {
+    .intro {
+        padding: 0;
+
+        &__wrapper {
+            width: 83.984375%;
+            padding: 1.875rem 2.5rem 2.875rem 2.6875rem;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1.625rem;
+            margin-bottom: 1.375rem;
+        }
+
+        &__begin {
+            font-size: 1.125rem;
+            line-height: 1.3125rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__info {
+            margin-bottom: 3.125rem;
+        }
+
+        &__description {
+            font-size: 1.125rem;
+            line-height: 1.3125rem;
+            margin-bottom: 1.375rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__controls {
+            grid-template-columns: 226px 264px;
+            grid-column-gap: 2.625rem;
+
+            &-link {
+                height: 54px;
+                padding: 0;
+                font-size: 1rem;
+                line-height: 1.1875rem;
+
+                &.--video {
+                    padding-right: 2.25rem;
+
+                    &::after {
+                        right: 1rem;
+
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                &.--mobile {
+                    display: none;
+                }
+
+                &.--desktop {
+                    display: flex;
+                }
+            }
+        }
+
+        &__prize {
+            max-width: 387px;
+
+            margin-bottom: 0;
+            z-index: 1;
+
+            &-frame {
+                z-index: -1;
+            }
+
+            &::after {
+                width: 181px;
+                height: 167px;
+
+                left: -10rem;
+            }
+
+            &-description {
+                width: 284px;
+                bottom: 6rem;
+                right: -6.5rem;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                padding: 0.625rem 0.875rem;
+
+                &::before {
+                    z-index: -1;
+                }
+
+                &::after {
+                    top: -2.25rem;
+                    right: -2.25rem;
+                    width: 73px;
+                    height: 69px;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

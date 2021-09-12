@@ -174,3 +174,123 @@
         }
     }
 }
+
+@include min-screen(768px) {
+    .result {
+        padding: 0;
+        margin-bottom: 0;
+
+        &__wrapper {
+            width: 100%;
+
+            @include flex-setting(column, flex-start, center);
+        }
+
+        &__main {
+            max-width: 448px;
+            padding: 1.3125rem 3.25rem 0.9375rem 3.25rem;
+            margin-bottom: 1.875rem;
+        }
+
+        &__frame {
+            order: 2;
+            max-width: 220px;
+            height: 220px;
+            padding-bottom: 0;
+            margin-bottom: 1rem;
+        }
+
+        &__name {
+            order: 1;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+        }
+
+        &__description {
+            order: 3;
+            font-size: 0.875rem;
+            line-height: 1.0625rem;
+        }
+
+        &__share {
+            order: 4;
+            margin-bottom: 0.75rem;
+
+            &-name {
+                margin-bottom: 1rem;
+            }
+
+            &-icons {
+                .social__item {
+                    margin-right: 1rem;
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 17px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .social__link {
+                    .fa-vk::before {
+                        font-size: 1.25rem;
+                    }
+
+                    .fa-instagram::before {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        &__reset {
+            order: 5;
+
+
+            background-color: transparent;
+            border: 2px solid $light-black;
+            border-radius: 40px;
+
+            padding: 0.75rem 3.25rem 0.8125rem 1.125rem;
+
+            &::after {
+                width: 17px;
+                height: 17px;
+
+                right: 2rem;
+            }
+        }
+
+        &__essay {
+            max-width: 408px;
+            padding: 1.0625rem 1rem 1.0625rem 1rem;
+
+            &-title {
+                font-size: 1.125rem;
+                line-height: 1.3125rem;
+                margin-bottom: 0.875rem;
+            }
+
+            &-description {
+                font-size: 1.125rem;
+                line-height: 1.3125rem;
+                margin-bottom: 0.75rem;
+            }
+
+            &-pic {
+                margin-bottom: 0.5rem;
+                width: 140px;
+                height: 140px;
+            }
+
+            &-link {
+                font-size: 1rem;
+                line-height: 1.1875rem;
+                padding: 0 3.75rem;
+                height: 54px;
+            }
+        }
+    }
+
+}
