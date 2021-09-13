@@ -134,6 +134,9 @@
         padding: 0.5rem 3.5rem 0.625rem 1.75rem;
         transition: 0.2s linear;
 
+        cursor: pointer;
+        outline: none;
+
         &::after {
             position: absolute;
             content: '';
@@ -497,6 +500,116 @@
                 line-height: 1.0625rem;
                 padding: 0 1.8125rem;
                 height: 36px;
+            }
+        }
+    }
+
+}
+
+@include min-screen(1366px) {
+    .result {
+        --width: calc(100% - 1006px);
+        padding-right: calc(var(--width) / 2);
+
+        &::after {
+            width: 189px;
+            height: 147px;
+            right: -3.125rem;
+        }
+
+        &__wrapper {
+            max-width: 983px;
+        }
+
+        &__main {
+            max-width: 442px;
+            margin-right: 4.875rem;
+
+            &::before {
+                width: 780px;
+                height: 1050px;
+                top: -7.9375rem;
+                left: -2.5rem;
+                z-index: -5;
+            }
+        }
+
+        &__frame {
+            height: 442px;
+            margin-bottom: 0.75rem;
+        }
+
+        &__name {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            line-height: 1.0625rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__share {
+            margin-bottom: 1.5rem;
+
+            &-name {
+                margin-bottom: 0.6875rem;
+            }
+
+            &-icons {
+                .social__item {
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 21px;
+                }
+            }
+        }
+
+        &__reset {
+            height: 48px;
+            padding: 0 4.25rem 0 2.25rem;
+
+            font-size: 1rem;
+            line-height: 1.1875rem;
+
+            &::after {
+                width: 21px;
+                height: 20px;
+                top: 55%;
+                right: 2.25rem;
+            }
+        }
+
+        &__essay {
+            max-width: 463px;
+            padding: 2.0625rem 1.8125rem 3.1875rem 1.8125rem;
+            margin-top: 4.875rem;
+
+            &-title {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                margin-bottom: 0.875rem;
+            }
+
+            &-description {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+                max-width: 285px;
+            }
+
+            &-pic {
+                width: 260px;
+                height: 260px;
+                margin-bottom: 1rem;
+            }
+
+            &-link {
+                font-size: 1rem;
+                line-height: 1.1875rem;
+                padding: 0 3rem;
+                height: 48px;
             }
         }
     }

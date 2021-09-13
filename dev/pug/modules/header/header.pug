@@ -13,8 +13,12 @@ header.header
                     a(href="" +i.link target="_self" class="nav__link " +i.type)=i.name
                     
         a(href="#" target="_self").nav__login Войти
+        a(href="#" target="_self").nav__login.login-desktop Войти через
         
         ul.nav__social
-            +socialItem('Instagram', '#', 'fa-instagram')
-            +socialItem('VK', '#', 'fa-vk')
-            +socialItem('Facebook', '#', 'fa-youtube')
+            li.social__item
+                a(href="#" target="_blank").social__link.social__link--in
+            li.social__item
+                a(href="#" target="_blank").social__link.social__link--vk
+            li.social__item
+                a(href="#" target="_blank").social__link.social__link--yt

@@ -133,6 +133,16 @@
         &.hidden {
             display: none;
         }
+
+        &.login-desktop {
+            display: none;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $white;
+            transition: 0.3s linear;
+        }
     }
 
     &__social {
@@ -284,6 +294,12 @@
             padding: 0.375rem 3rem 0.375rem 1.25rem;
             white-space: nowrap;
 
+            display: none;
+
+            &.login-desktop {
+                display: flex;
+            }
+
             &::after {
                 width: 22px;
                 height: 12px;
@@ -319,6 +335,7 @@
                     width: 11px;
                     height: 14px;
                     right: 0.75rem;
+                    top: 57%;
                 }
             }
         }

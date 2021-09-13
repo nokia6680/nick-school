@@ -12,13 +12,15 @@ html(lang="ru-RU")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-    body.body
+    body.body.body-test
         include ../modules/header/header
         main.main
-            .event-bg
-                img(src="static/images/content/index-bg-pink-round.svg" alt="").event-bg__img
-                img(src="static/images/content/index-bg-violet-round.svg" alt="").event-bg__img.result-img
             section.event.passed
+                .event__pic.olli
+                .event__pic.lily
+                .event__pic.pin
+                .event__pic.pens
+                    
                 .event__wrapper
                     h1.event__title Пройди тест, чтобы узнать, кто ты из героев Nickelodeon
                     
@@ -71,8 +73,10 @@ html(lang="ru-RU")
                         .result__share
                             b.result__share-name Поделиться результатом:
                             .result__share-icons
-                                +socialItem('Instagram', '#', 'fa-instagram')
-                                +socialItem('VK', '#', 'fa-vk')
+                                li.social__item
+                                    a(href="#" target="_blank").social__link.social__link--in
+                                li.social__item
+                                    a(href="#" target="_blank").social__link.social__link--vk
                         button(type="reset").result__reset Пройти ещё раз
                     .result__essay
                         h3.result__essay-title Хочешь получить ещё больше призов?

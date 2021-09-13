@@ -54,7 +54,7 @@
 @include min-screen(1366px) {
     .footer {
         position: absolute;
-        bottom: 0;
+        bottom: 0.5rem;
         left: 50%;
         transform: translateX(-50%);
         padding: 0;
@@ -84,7 +84,6 @@
         }
 
         &__legal {
-            justify-self: end;
             grid-area: legal;
             font-size: 0.5rem;
             line-height: 0.625rem;
@@ -126,6 +125,36 @@
                 .fa-instagram::before {
                     font-size: 1rem;
                     color: $blue;
+                }
+            }
+        }
+    }
+}
+
+@include min-screen(1920px) {
+    .footer {
+        max-width: 1572px;
+        padding: 0;
+
+        &__logo {
+            width: 229px;
+            height: 76px;
+        }
+
+        &__legal {
+            justify-self: end;
+            font-size: 0.625rem;
+        }
+
+        &__social {
+            .social__item {
+                margin-left: 1.25rem;
+                width: 42px;
+                height: 42px;
+                border-radius: 21px;
+
+                &:first-child {
+                    margin-left: 0;
                 }
             }
         }

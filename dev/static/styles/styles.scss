@@ -85,6 +85,12 @@ button { outline: none; }
         overflow: hidden;
     }
 
+    &.body-test {
+        .footer {
+            z-index: 99;
+        }
+    }
+
     @media only screen and (min-width: 1366px) {
         overflow: hidden;
     }

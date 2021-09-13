@@ -113,3 +113,29 @@
         }
     }
 }
+
+@include min-screen(768px) {
+    .popup-prize {
+        &__wrapper {
+            max-width: 520px;
+            border-width: 3px;
+        }
+
+        &__link {
+            width: 126px;
+            height: 47px;
+        }
+
+        &__closer {
+            width: 22px;
+            height: 22px;
+        }
+
+        &__frame {
+            margin-top: -2rem;
+            max-width: 234px;
+            height: 222px;
+            margin-bottom: 0.625rem;
+        }
+    }
+}

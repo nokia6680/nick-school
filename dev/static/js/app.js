@@ -39,6 +39,20 @@ var galleryThumbs = new Swiper('.video-thumbs', {
                 draggable: true,
             },
         },
+
+        1920: {
+            spaceBetween: 8,
+            slidesPerView: 3,
+            freeMode: false,
+            direction: 'vertical',
+            autoplay: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+        },
     },
 });
 
