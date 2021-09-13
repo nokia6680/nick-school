@@ -1,8 +1,5 @@
 .header {
     width: 100%;
-
-    background-color: $white;
-
     @include flex-setting(row, center, center);
 
     position: relative;

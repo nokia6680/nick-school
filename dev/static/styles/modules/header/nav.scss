@@ -66,9 +66,7 @@
         @include flex-setting(row, flex-start, center);
         margin-bottom: 0.9375rem;
 
-        &:last-child {
-            margin-bottom: 0;
-
+        &.planer {
             position: relative;
 
             padding-right: 1.25rem;
@@ -89,6 +87,10 @@
                 right: 0;
                 transform: translateY(-50%);
             }
+        }
+
+        &.last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -180,15 +182,17 @@
         &__item {
             margin-bottom: 2.375rem;
 
-            &:last-child {
-                margin-bottom: 0;
-
+            &.planer {
                 padding-right: 1.75rem;
 
                 &::after {
                     width: 17px;
                     height: 22px;
                 }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
 
@@ -242,10 +246,7 @@
             margin-bottom: 0rem;
             margin-right: 2.5rem;
 
-            &:last-child {
-                margin-bottom: 0;
-                margin-right: 0;
-
+            &.planer {
                 padding-right: 0.25rem;
 
                 .nav__link {
@@ -257,6 +258,10 @@
                     width: 9px;
                     height: 11px;
                 }
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
         }
 
@@ -325,8 +330,7 @@
         &__item {
             margin-right: 3rem;
 
-            &:last-child {
-                margin-right: 0;
+            &.planer {
                 .nav__link {
                     padding-right: 1.25rem;
                 }
@@ -337,6 +341,10 @@
                     right: 0.75rem;
                     top: 57%;
                 }
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
         }
 

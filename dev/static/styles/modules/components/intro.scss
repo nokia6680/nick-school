@@ -475,11 +475,7 @@
             }
 
             &::after {
-                width: 137px;
-                height: 130px;
-
-                left: -8rem;
-                bottom: -1rem;
+                display: none;
             }
 
             &-description {
@@ -598,13 +594,6 @@
                 top: -2.5rem;
             }
 
-            &::after {
-                width: 258px;
-                height: 244px;
-
-                left: -16rem;
-                bottom: -4rem;
-            }
 
             &-description {
                 width: 360px;

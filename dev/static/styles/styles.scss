@@ -85,14 +85,176 @@ button { outline: none; }
         overflow: hidden;
     }
 
-    &.body-test {
-        .footer {
-            z-index: 99;
+    @media only screen and (min-width: 1366px) {
+        overflow: hidden;
+    }
+}
+
+.body-test,
+.body-main,
+.body-essay {
+    .footer {
+        z-index: 99;
+    }
+}
+
+.body-main {
+    background-image: url('../images/content/index-bg-mobile.svg');
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 1366px) {
+        background-image: url('../images/content/index-bg-desktop.svg');
+        background-position: right bottom;
+        background-size: contain;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 320px;
+            height: 90px;
+            background-image: url('../images/content/foo-half.svg');
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -0.25rem;
+            left: 45%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 137px;
+            height: 130px;
+
+            background-image: url('../images/content/sb-pen.svg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            bottom: 3rem;
+            left: 48%;
+            transform: translateX(-50%);
+            z-index: 2;
         }
     }
 
+    @media only screen and (min-width: 1920px) {
+        &::after {
+            width: 600px;
+            height: 180px;
+            left: 40%;
+        }
+
+        &::before {
+            width: 258px;
+            height: 244px;
+            left: 45%;
+            bottom: 2rem;
+        }
+    }
+}
+
+.body-result {
+    @media only screen and (min-width: 768px) {
+        background-image: url('../images/content/result-tablet-bg.svg');
+        background-position: left bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     @media only screen and (min-width: 1366px) {
-        overflow: hidden;
+        background-image: url('../images/content/result-1366-bg.svg');
+        background-position: right bottom;
+        background-size: 80%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        background-image: url('../images/content/result-1920-bg.svg');
+        background-position: right 40px bottom;
+        background-size: 80%;
+    }
+}
+
+.body-test {
+    background-image: url('../images/content/test-bg-mobile.svg');
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 768px) {
+        background-image: url('../images/content/test-bg-tablet.svg');
+        background-position: top right;
+        background-size: 40%;
+    }
+
+    @media only screen and (min-width: 1366px) {
+        background-image: url('../images/content/test-1366-bg.svg');
+        background-position: top right;
+        background-size: 29%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        background-image: url('../images/content/test-1920-bg.svg');
+        background-position: top right;
+        background-size: 35%;
+    }
+}
+
+.body-essay {
+    background-image: url('../images/content/essay-bg-mobile.svg');
+    background-position: top 5% left;
+    background-size: 50%;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 768px) {
+        background-image: url('../images/content/essay-bg-tablet.svg');
+        background-position: top right;
+        background-size: auto;
+    }
+
+    @media only screen and (min-width: 1366px) {
+        background-image: url('../images/content/essay-bg-1366.svg');
+        background-position: top right;
+        background-size: contain;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        background-image: url('../images/content/essay-bg-1920.svg');
+        background-position: top right;
+        background-size: auto;
+    }
+}
+
+.body-video {
+    min-height: 100vh;
+    background-image: url('../images/content/video-bg-mobile.svg');
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 768px) {
+        background-image: url('../images/content/video-bg-tablet.svg');
+        background-position: bottom -30% left;
+        background-size: auto;
+    }
+
+    @media only screen and (min-width: 1366px) {
+        background-image: url('../images/content/video-bg-1366.svg');
+        background-position: bottom -20px right;
+        background-size: 60%;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        background-image: url('../images/content/video-bg-1920.svg');
+        background-position: bottom right;
+        background-size: 60%;
     }
 }
 

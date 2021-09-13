@@ -1,0 +1,218 @@
+.popup-winner {
+    width: 100vw;
+    height: 100vh;
+
+    @include flex-setting(column, center, center);
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
+
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 98%;
+        max-width: 306px;
+
+        @include flex-setting(column, flex-start, center);
+
+        background-color: $white;
+        border: 2px solid $light-black;
+
+        padding: 0.75rem 0.75rem;
+    }
+
+    &__closer {
+        align-self: flex-end;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.32275 4.57849L27.2106 25.8879' stroke='black' stroke-width='8'/%3E%3Cpath d='M3.53345 26.1127L27.1274 4.88732' stroke='black' stroke-width='8'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        cursor: pointer;
+    }
+
+    &__title {
+        @include font-setting($title-font, 0.6875rem, 1.75rem, 800, $light-black);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__main {
+        @include font-setting($adv-font, 0.6875rem, 1.75rem, 700, $light-black);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include font-setting($title-font, 0.6875rem, 1.75rem, 800, $light-black);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__list {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.375rem;
+        grid-row-gap: 0.9375rem;
+    }
+
+    &__item {
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+    }
+
+    &__name {
+        @include font-setting($adv-font, 0.625rem, 0.6875rem, 700, $light-black);
+        text-transform: uppercase;
+        margin-bottom: 0.125rem;
+    }
+
+    &__city {
+        @include font-setting($adv-font, 0.625rem, 0.6875rem, 400, $light-black);
+        text-transform: uppercase;
+    }
+}
+
+@include min-screen(768px) {
+    .popup-winner {
+        &__wrapper {
+            max-width: 570px;
+            padding: 1.25rem 3.375rem 3.375rem 3.375rem;
+        }
+
+        &__closer {
+            width: 32px;
+            height: 32px;
+            margin-right: -2rem;
+        }
+
+        &__title {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &__main {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &__subtitle {
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__list {
+            grid-row-gap: 2rem;
+            justify-content: space-between;
+        }
+
+        &__name {
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+
+        &__city {
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+    }
+}
+
+@include min-screen(1366px) {
+    .popup-winner {
+        &__wrapper {
+            max-width: 402px;
+            padding: 1.25rem 2.625rem 1.875rem 2.625rem ;
+            border-width: 3px;
+        }
+
+        &__closer {
+            width: 20px;
+            height: 20px;
+            margin-right: -1rem;
+        }
+
+        &__title {
+            margin-bottom: 0.125rem;
+        }
+
+        &__main {
+            margin-bottom: 0.125rem;
+        }
+
+        &__list {
+            grid-row-gap: 0.75rem;
+        }
+
+        &__name {
+            font-size: 0.625rem;
+        }
+
+        &__city {
+            font-size: 0.625rem;
+        }
+    }
+}
+
+@include min-screen(1920px) {
+    .popup-winner {
+        &__wrapper {
+            max-width: 560px;
+            padding: 1.25rem 3.75rem 3.375rem 3.75rem ;
+        }
+
+        &__closer {
+            width: 30px;
+            height: 30px;
+            margin-right: -2rem;
+        }
+
+        &__title {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &__subtitle {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__main {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &__list {
+            grid-row-gap: 1.375rem;
+        }
+
+        &__name {
+            font-size: 0.8125rem;
+        }
+
+        &__city {
+            font-size: 0.8125rem;
+        }
+    }
+}

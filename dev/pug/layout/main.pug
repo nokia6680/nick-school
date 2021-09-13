@@ -15,13 +15,6 @@ html(lang="ru-RU")
     body.body.body-main
         include ../modules/header/header
         main.main
-            .index-bg
-                img(src="static/images/content/index-bg-blue-round.svg" alt="").index-bg__img.index-img-1
-                img(src="static/images/content/index-bg-yellow-quad.svg" alt="").index-bg__img.index-img-2
-                img(src="static/images/content/index-bg-pink-quad.svg" alt="").index-bg__img.index-img-3
-                svg(width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg").index-bg__img.index-img-4
-                    circle(cx="65" cy="65" r="64" fill="#FF7DAF" stroke="#272727" stroke-width="3")
-                img(src="static/images/content/index-bg-violet-quad.svg" alt="").index-bg__img.index-img-5
             section.intro
                 .intro__wrapper
                     h1.intro__title Снова в школу!
@@ -48,6 +41,7 @@ html(lang="ru-RU")
                     .intro__prize-description Этот рюкзак может быть твоим!
         include ../modules/footer/footer
         include ../modules/blocks/popup-prize
-        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        include ../modules/blocks/popup-winner
+        //script(src="static/js/vendor/jquery-3.3.1.min.js")
         script(src="static/js/main.js")
         block script

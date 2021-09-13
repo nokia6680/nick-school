@@ -192,6 +192,7 @@
 @include min-screen(768px) {
     .video {
         margin-top: 1rem;
+        margin-bottom: 0;
 
         &::after {
             width: 108px;
