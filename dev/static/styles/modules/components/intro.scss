@@ -70,6 +70,16 @@
             background-color: $white;
             transition: 0.2s ease-in;
 
+            &.--start {
+                background-color: $orange;
+
+                &:hover,
+                &:active {
+                    background-color: $white;
+                    transition: 0.2s ease-in;
+                }
+            }
+
             &.--video {
                 padding-right: 1.125rem;
 
@@ -91,16 +101,16 @@
                     background-repeat: no-repeat;
                     background-size: contain;
                 }
+
+                &:hover,
+                &:active {
+                    background-color: $pink;
+                    transition: 0.2s ease-in;
+                }
             }
 
             &.--desktop {
                 display: none;
-            }
-
-            &:hover,
-            &:active {
-                background-color: $orange;
-                transition: 0.2s ease-in;
             }
         }
     }
@@ -116,6 +126,7 @@
         border: 2px solid $light-black;
 
         margin-bottom: 3.625rem;
+        text-decoration: none;
 
         &::after {
             position: absolute;
